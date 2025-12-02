@@ -1,0 +1,37 @@
+.header-row {
+  display: flex;
+  align-items: center;      /* Выравнивание по вертикали */
+  justify-content: center;  /* Центрирует содержимое по горизонтали */
+}
+
+.left {
+  padding-left: 50px;
+  padding: 15px;
+}
+
+.icon-search {
+  height: 16px; 
+  width: 16px;  
+  object-fit: contain; /* Сохраняет пропорции */
+  display: block;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Центрирует заголовок и расширяет блок, чтобы занять доступное пространство */
+  text-align: center;
+}
+
+.fonthigh0 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+}
+
+
+.backgr {
+  background: #23043b; 
+  padding: 5px; 
+}
