@@ -1,37 +1,128 @@
-.header-row {
-  display: flex;
-  align-items: center;      /* Выравнивание по вертикали */
-  justify-content: center;  /* Центрирует содержимое по горизонтали */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+body {
+ font-family: 'Inter', system-ui, sans-serif;
 }
-
-.left {
-  padding-left: 50px;
-  padding: 15px;
-}
-
-.icon-search {
-  height: 16px; 
-  width: 16px;  
-  object-fit: contain; /* Сохраняет пропорции */
-  display: block;
-}
-
-.centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1; /* Центрирует заголовок и расширяет блок, чтобы занять доступное пространство */
-  text-align: center;
-}
-
-.fonthigh0 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-style: normal;
-}
-
-
 .backgr {
   background: #23043b; 
   padding: 5px; 
+}
+.header {
+ display: flex;
+ justify-content: space-between;
+ padding: 1rem;
+ background: #fff;
+}
+.header__nav {
+  margin-top: 16px;          
+}
+
+.header__logo {
+ font-size: 1.5rem;
+ font-weight: bold;
+}
+.nav__list {
+ display: flex;
+ gap: 1rem;
+ list-style: none;
+}
+
+.nav__item--active .nav__link {
+ color: #2c5530;
+ border-bottom: 2px solid #2c5530;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 40px;
+}
+
+
+.card {
+   padding: 1rem;
+ border: 1px solid #ddd;
+ border-radius: 8px;
+}
+.card__title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.card__text {
+  font-size: 14px;
+  margin: 10px 0 10px;
+}
+.card--featured {
+ background: #f8f9fa;
+ border-color: #2c5530;
+}
+
+.nav__link {
+ transition: all 0.3s ease;
+ padding: 0.5rem 1rem;
+ border-radius: 4px;
+}
+.nav__link:hover {
+ background-color: #f0f0f0;
+ transform: translateY(-1px);
+}
+.nav__link:focus {
+ outline: 2px solid #2c5530;
+ outline-offset: 2px;
+}
+.nav__link:active {
+ transform: translateY(0);
+}
+.card {
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.button {
+ background-color: #2c5530;
+ color: white;
+ padding: 0.75rem 1.5rem;
+ border: none;
+ border-radius: 6px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+}
+.button:hover {
+ background-color: #1e3a22;
+ transform: scale(1.05);
+}
+.button:active {
+ transform: scale(0.98);
+}
+.button:disabled {
+ background-color: #ccc;
+ cursor: not-allowed;
+ transform: none;
+}
+.fade-in {
+ animation: fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+ from { opacity: 0; transform: translateY(10px); }
+ to { opacity: 1; transform: translateY(0); }
+}
+/* Подсветка текущего раздела */
+.section-highlight {
+ transition: all 0.3s ease;
+}
+.section-highlight:hover {
+ border-left: 4px solid #2c5530;
+ padding-left: 1rem;
+}
+/* Интерактивные карточки */
+.interactive-card {
+ cursor: pointer;
+ transition: all 0.3s ease;
+}
+.interactive-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
